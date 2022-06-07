@@ -4,7 +4,6 @@ This program uses different modules (shelve, pyperclip, sys) to automate the cop
 
 Inspired by automate the boring stuff with python book, this program helps students have their class links in the clipboard so that they can just paste it instead of finding the link for the class, copying it, and then pasting it.
 
-<br />
 
 ## NOTE
 
