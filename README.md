@@ -38,6 +38,10 @@ Make sure that the python file must be installed on your device.
 
 `python <filename> list` - Loads all keywords (in a list) to clipboard
 
+`python <filename> del <keyphrase>` - Deletes the class and its link
+
+`python <filename> delete` - Deletes **every** class and its link
+
 `<filename>` is where the python script file is located
 - Make sure to include the .py extension
     - e.g. D:\python\main.py (Windows)
@@ -70,9 +74,11 @@ On the terminal (alt+t), enter: `python3 <filename> <commands>`
 
 2. The program then takes the command of the user and checks if it's a valid input
 
-3. If the input is valid, it will check whether it's 'save' 'list' or the name of the class
-    - If it's 'save,' it will put the link of the class (which is in your clipboard, the one that is last copied) into the file with the name of the variable being the class name (keyphrase)
-    - If it's 'list,' it will put into your clipboard the list of the classes that are in the data file
+3. If the input is valid, it will check whether it's 'save' 'list' 'del' 'delete' or the name of the class
+    - If it's '**save**,' it will put the link of the class (which is in your clipboard, the one that is last copied) into the file with the name of the variable being the class name (keyphrase)
+    - If it's '**list**,' it will put into your clipboard the list of the classes that are in the data file
+    - If it's '**del**,' it will delete the class (including the link) from the file
+    - If it's '**delete**,' it will delete every class in the data storage
     - If it's name of the class (or keyphrase), it will check the data file.
         - If it's in the data file, it will put the link of the classs into the clipboard for easy pasting.
         - If it's not, nothing will happen unless the program is run in the terminal. If so, it will print a message saying that there's no link for said class.
