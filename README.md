@@ -77,4 +77,11 @@ On the terminal (alt+t), enter: `python3 <filename> <commands>`
         - If it's in the data file, it will put the link of the classs into the clipboard for easy pasting.
         - If it's not, nothing will happen unless the program is run in the terminal. If so, it will print a message saying that there's no link for said class.
 
+### 4. Additional Notes
+- When the program first runs, the data file will be created wherever you run it
+    - e.g. if I did `python3 /home/Desktop/class-links-clipboard/main.py`, the data file will be created in the root directory. Which means that everytime I run this program, I have to type the same command
+- To fix this, make changes to the main.py by adding the `file_path = str(Path(.../classes_data))` code
+    - ... indicates the directories where classes_data is located so that everytime the program is run, it will access the data from that file
+- The code may not follow the best practices of python. But, this project is made for learning purposes and for simplicity of making my life (and possibly others) easier.
+
 If the program doesn't work, dm me on twitter @airiseru and I'll do my best to help :)
