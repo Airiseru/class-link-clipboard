@@ -25,11 +25,17 @@ if __name__ == "__main__":
         print("Usage of file is incorrect. Please check the README.md file")
         sys.exit()
 
-    # Adds the new link from clipboard to the data storage
-    elif len(sys.argv) == 3 and sys.argv[1] == 'save':
-        new_phrase = sys.argv[2]
-        class_link_file[new_phrase] = pyperclip.paste()
-        print("Link for " + new_phrase + " has been saved")
+    elif len(sys.argv) == 3:
+        # Adds the new link from clipboard to the data storage
+        if sys.argv[1] == 'save':
+            new_phrase = sys.argv[2]
+            class_link_file[new_phrase] = pyperclip.paste()
+            print("Link for " + new_phrase + " has been saved")
+
+        # Deletes a link from data storage
+        elif sys.argv[1] == 'del':
+            del class_link_file[sys.argv[2]]
+            print("Link for " + sys.argv[2] + " has been deleted.")
 
     # Checks for different cases depending on the keyphrase entered
     elif len(sys.argv) == 2:
@@ -38,6 +44,10 @@ if __name__ == "__main__":
         if keyphrase.lower() == 'list':
             pyperclip.copy(str(list(class_link_file.keys())))
             print("The list of classes that are in the data file is in your clipboard")
+        elif keyphrase.lower() == 'delete':
+            for key in class_link_file.keys():
+                del class_link_file[key]
+            print("All the classes and its link have been deleted.")
         elif keyphrase in class_link_file.keys():
             pyperclip.copy(class_link_file[keyphrase])
             print("Link for " + keyphrase + " has been copied.")
