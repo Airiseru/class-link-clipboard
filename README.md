@@ -20,6 +20,7 @@ Inspired by automate the boring stuff with python book, this program helps stude
         - Ubuntu: `sudo apt install python3-pip`
         - MacOS: `python3 -m ensurepip --upgrade`
     - Use `pip install pyperclip` to install the pyperclip module
+    - You can also use the requirements.txt file to install all modules by entering `pip3 install -r requirements.txt` on Linux
 
 <br />
 
@@ -27,6 +28,8 @@ Inspired by automate the boring stuff with python book, this program helps stude
 Depending on your operating system, there are different ways on running the program.
 
 Make sure that the python file must be installed on your device.
+- Enter `git clone https://github.com/Airiseru/class-link-clipboard` on the terminal
+- Use any other method such as Download ZIP, SSH, or GitHub CLI (green button that has the word 'code')
 
 #### General Usage
 `python <filename> save <keyphrase>` - Saves to clipboard the keyword and its link
